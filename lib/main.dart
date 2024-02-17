@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thirty_days_flutter/screens/home_screen.dart';
 import 'package:thirty_days_flutter/screens/login_screen.dart';
+import 'package:thirty_days_flutter/utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     // bool isMale = true;
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // home: const HomeScreen(),
       theme: ThemeData(
         // primaryTextTheme: GoogleFonts.latoTextTheme(),
@@ -27,10 +29,10 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
 
-      initialRoute: "/LogIn",
       routes: {
-        "/": (context) => const HomeScreen(),
-        "/LogIn": (context) => const LoginScreen(),
+        "/": (context) => const LoginScreen(),
+        MyRoutes.HomeRoute: (context) => const HomeScreen(),
+        MyRoutes.LoginRoute: (context) => const LoginScreen(),
       },
     );
   }

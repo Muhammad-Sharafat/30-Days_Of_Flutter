@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const String channelName = 'codepur';
     const days = 30;
-    Color blue = Colors.blue;
+    Color blue = Colors.deepPurple;
     String title = '30 Days of Flutter';
     return Scaffold(
       appBar: AppBar(

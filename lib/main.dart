@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:thirty_days_flutter/screens/home_screen.dart';
 import 'package:thirty_days_flutter/screens/login_screen.dart';
 
@@ -19,9 +20,14 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       // home: const HomeScreen(),
+      theme: ThemeData(
+        // primaryTextTheme: GoogleFonts.latoTextTheme(),
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/",
+
+      initialRoute: "/LogIn",
       routes: {
         "/": (context) => const HomeScreen(),
         "/LogIn": (context) => const LoginScreen(),
